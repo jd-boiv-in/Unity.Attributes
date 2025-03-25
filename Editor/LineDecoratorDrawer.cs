@@ -27,6 +27,7 @@ namespace JD.Attributes
         }
     }
 #else
+    // From: https://vintay.medium.com/creating-custom-unity-attributes-divider-horizontal-line-dae2403a4c89
     [CustomPropertyDrawer(typeof(LineAttribute))]
     public class LineDecoratorDrawer : DecoratorDrawer
     {

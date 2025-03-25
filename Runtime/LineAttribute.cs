@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace JD.Attributes
 {
-    // From: https://vintay.medium.com/creating-custom-unity-attributes-divider-horizontal-line-dae2403a4c89
     [AttributeUsage(AttributeTargets.Field, AllowMultiple = true, Inherited = true)]
     public class LineAttribute : PropertyAttribute
     {
