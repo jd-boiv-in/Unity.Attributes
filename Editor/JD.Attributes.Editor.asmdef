@@ -1,0 +1,18 @@
+{
+    "name": "JD.Attributes.Editor",
+    "rootNamespace": "JD.Attributes",
+    "references": [
+        "GUID:d3b1a02056727464087828be87e8ff4d"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

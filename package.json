@@ -1,0 +1,17 @@
+{
+  "name": "jd.boiv.in.attributes",
+  "version": "1.0.0",
+  "displayName": "Attributes",
+  "description": "Collection of Attributes for Unity",
+  "dependencies": {
+    
+ },
+ "keywords": [
+    "attributes", "editor"
+  ],
+  "author": {
+    "name": "Jean-Denis Boivin",
+    "email": "jd@boiv.in",
+    "url": "https://jd.boiv.in"
+  }
+}
