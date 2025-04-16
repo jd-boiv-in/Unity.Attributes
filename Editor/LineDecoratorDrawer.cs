@@ -18,7 +18,7 @@ namespace JD.Attributes
         {
             var rect = EditorGUI.IndentedRect(EditorGUILayout.GetControlRect(false));
             rect.x += 3;
-            rect.y += 12 - Attribute.Height / 2f;
+            rect.y += 9 - Attribute.Height / 2f;
             rect.width -= 6;
             rect.height = Attribute.Height;
             SirenixEditorGUI.DrawSolidRect(rect, Attribute.Color.GetColor());
