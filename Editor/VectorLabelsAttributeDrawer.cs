@@ -84,7 +84,7 @@ namespace JD.Attributes
 
             for (var i = 0; i < vector.Length; i++)
             {
-                var label = vectorLabels.Labels.Length > i ? new GUIContent(vectorLabels.Labels[i]) : _defaultLabels[i];
+                var label = vectorLabels.Labels.Length > i ? new GUIContent((i > 0 ? " " : "") + vectorLabels.Labels[i]) : _defaultLabels[i];
                 var labelSize = EditorStyles.label.CalcSize(label);
                 EditorGUIUtility.labelWidth = Mathf.Max(labelSize.x + 5, 0.3f * fieldRect.width);
                 result[i] = fieldDrawer(fieldRect, label, vector[i]);
