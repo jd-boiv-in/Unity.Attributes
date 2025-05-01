@@ -7,7 +7,7 @@ namespace JD.Attributes
     [CustomPropertyDrawer(typeof(VectorLabelsAttribute))]
     public class VectorLabelsAttributeDrawer : PropertyDrawer
     {
-        private static readonly GUIContent[] _defaultLabels = new GUIContent[]{ new GUIContent( "X" ), new GUIContent( "Y" ), new GUIContent( "Z" ), new GUIContent( "W" ) };
+        private static readonly GUIContent[] _defaultLabels = new GUIContent[]{ new GUIContent("X"), new GUIContent("Y"), new GUIContent("Z"), new GUIContent("W") };
 
         private const int TwoLinesThreshold = 375;
 
@@ -25,32 +25,32 @@ namespace JD.Attributes
             if (property.propertyType == SerializedPropertyType.Vector2Int)
             {
                 var array = new int[] { property.vector2IntValue.x, property.vector2IntValue.y };
-                array = DrawFields( position, array, ObjectNames.NicifyVariableName( property.name ), EditorGUI.IntField, vectorLabels );
-                property.vector2IntValue = new Vector2Int( array[0], array[1] );
+                array = DrawFields(position, array, ObjectNames.NicifyVariableName(property.name), EditorGUI.IntField, vectorLabels);
+                property.vector2IntValue = new Vector2Int(array[0], array[1]);
             }
             else if (property.propertyType == SerializedPropertyType.Vector3Int)
             {
                 var array = new int[] { property.vector3IntValue.x, property.vector3IntValue.y, property.vector3IntValue.z };
-                array = DrawFields( position, array, ObjectNames.NicifyVariableName( property.name ), EditorGUI.IntField, vectorLabels );
-                property.vector3IntValue = new Vector3Int( array[0], array[1], array[2] );
+                array = DrawFields(position, array, ObjectNames.NicifyVariableName(property.name), EditorGUI.IntField, vectorLabels);
+                property.vector3IntValue = new Vector3Int(array[0], array[1], array[2]);
             }
             else if (property.propertyType == SerializedPropertyType.Vector2)
             {
                 var array = new float[] { property.vector2Value.x, property.vector2Value.y };
-                array = DrawFields( position, array, ObjectNames.NicifyVariableName( property.name ), EditorGUI.FloatField, vectorLabels );
-                property.vector2Value = new Vector2( array[0], array[1] );
+                array = DrawFields(position, array, ObjectNames.NicifyVariableName(property.name), EditorGUI.FloatField, vectorLabels);
+                property.vector2Value = new Vector2(array[0], array[1]);
             }
             else if (property.propertyType == SerializedPropertyType.Vector3)
             {
                 var array = new float[] { property.vector3Value.x, property.vector3Value.y, property.vector3Value.z };
-                array = DrawFields( position, array, ObjectNames.NicifyVariableName( property.name ), EditorGUI.FloatField, vectorLabels );
-                property.vector3Value = new Vector3( array[0], array[1], array[2] );
+                array = DrawFields(position, array, ObjectNames.NicifyVariableName(property.name), EditorGUI.FloatField, vectorLabels);
+                property.vector3Value = new Vector3(array[0], array[1], array[2]);
             }
             else if (property.propertyType == SerializedPropertyType.Vector4)
             {
                 var array = new float[] { property.vector4Value.x, property.vector4Value.y, property.vector4Value.z, property.vector4Value.w };
-                array = DrawFields( position, array, ObjectNames.NicifyVariableName( property.name ), EditorGUI.FloatField, vectorLabels );
-                property.vector4Value = new Vector4( array[0], array[1], array[2] );
+                array = DrawFields(position, array, ObjectNames.NicifyVariableName(property.name), EditorGUI.FloatField, vectorLabels);
+                property.vector4Value = new Vector4(array[0], array[1], array[2]);
             }
         }
 
@@ -63,12 +63,12 @@ namespace JD.Attributes
             // Get the rect of the main label
             var mainLabelRect = rect;
             mainLabelRect.width = EditorGUIUtility.labelWidth;
-            if ( twoLinesLayout )
+            if (twoLinesLayout)
                 mainLabelRect.height *= 0.5f;
 
             // Get the size of each field rect
             var fieldRect = rect;
-            if ( twoLinesLayout )
+            if (twoLinesLayout)
             {
                 fieldRect.height *= 0.5f;
                 fieldRect.y += fieldRect.height;
@@ -77,10 +77,10 @@ namespace JD.Attributes
             else
             {
                 fieldRect.x += mainLabelRect.width;
-                fieldRect.width = ( rect.width - mainLabelRect.width ) / vector.Length;
+                fieldRect.width = (rect.width - mainLabelRect.width) / vector.Length;
             }
 
-            EditorGUI.LabelField( mainLabelRect, mainLabel );
+            EditorGUI.LabelField(mainLabelRect, mainLabel);
 
             for (var i = 0; i < vector.Length; i++)
             {
