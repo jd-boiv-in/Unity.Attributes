@@ -5,7 +5,7 @@ namespace JD.Attributes
 {
     // Add a checkbox to a Vector2 to use the value as random
     [CustomPropertyDrawer(typeof(RandomAttribute))]
-    public class RandomAttributeDrawer : PropertyDrawer
+    public class RandomDrawer : PropertyDrawer
     {
         private const int TwoLinesThreshold = 375;
 

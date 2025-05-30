@@ -5,7 +5,7 @@ namespace JD.Attributes
 {
     // From https://discussions.unity.com/t/how-to-change-the-names-of-a-vector-3-that-is-set-in-the-inspector/216935/3
     [CustomPropertyDrawer(typeof(VectorLabelsAttribute))]
-    public class VectorLabelsAttributeDrawer : PropertyDrawer
+    public class VectorLabelsDrawer : PropertyDrawer
     {
         private static readonly GUIContent[] _defaultLabels = new GUIContent[]{ new GUIContent("X"), new GUIContent("Y"), new GUIContent("Z"), new GUIContent("W") };
 
